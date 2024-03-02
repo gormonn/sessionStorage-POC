@@ -3,9 +3,24 @@
 <head>
     <title>Main Page</title>
 </head>
-<body>
+<body style="margin: 0;">
     <h1>Main Page</h1>
-    <iframe src="http://localhost:1234/"></iframe>
-    <iframe src="http://localhost:1234/"></iframe>
+    <div style="display: flex; width: 100vw; height: 90vh;">
+        <div style="display: flex; flex-direction: column; flex-grow: 1;">
+            <h3>Without sandbox</h3>
+            <iframe src="http://localhost:1234/?muteSound=true" style="flex-grow: 1;"></iframe>
+            <iframe src="http://localhost:1234/" style="flex-grow: 1;"></iframe>
+        </div>
+        <div style="display: flex; flex-direction: column; flex-grow: 1;">
+            <h3>With sandbox</h3>
+            <iframe src="http://localhost:1234/?muteSound=false" style="flex-grow: 1;" sandbox="allow-scripts allow-same-origin"></iframe>
+            <iframe src="http://localhost:1234/" style="flex-grow: 1;" sandbox="allow-scripts allow-same-origin"></iframe>
+        </div>
+        <div style="display: flex; flex-direction: column; flex-grow: 1;">
+            <h3>With allow credentialless</h3>
+            <iframe src="http://localhost:1234/?muteSound=true" style="flex-grow: 1;" allow="credentialless" sandbox></iframe>
+            <iframe src="http://localhost:1234/" style="flex-grow: 1;" allow="credentialless" sandbox></iframe>
+        </div>
+    </div>
 </body>
 </html>
