@@ -1,0 +1,14 @@
+{
+  "name": "sessionStorage-POC",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:gormonn/sessionStorage-POC.git",
+  "author": "Dmitriy Aleksandrovich Chernukho <gormonn@redcollar.ru>",
+  "license": "MIT",
+  "scripts": {
+    "demo": "yarn serve main & yarn serve content -l 1234"
+  },
+  "devDependencies": {
+    "serve": "^14.2.1"
+  }
+}
